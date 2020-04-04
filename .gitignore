@@ -1,0 +1,13 @@
+*~
+*.swp
+*.log
+*.pyc
+*.o
+*.elf
+bin/
+include/
+lib/
+lib64
+share/
+jupyterhub.sqlite
+jupyterhub_cookie_secret

@@ -1,0 +1,33 @@
+
+# https://jupyterhub.readthedocs.io/en/stable/installation-guide-hard.html
+
+# cd /etc/systemd/system
+# sudo ln -fs /home/ponyatov/jupy/etc/systemd/jupyterhub.service jupyterhub.service
+# sudo systemctl daemon-reload
+# sudo systemctl enable jupyterhub.service
+# sudo systemctl start  jupyterhub.service
+# sudo systemctl status jupyterhub.service
+
+[Unit]
+
+Description=JupyterHub
+After=syslog.target network.target
+
+[Service]
+
+# Restart=always
+
+User=root
+# User=ponyatov
+
+# Environment="PATH=/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/jupyterhub/bin"
+Environment="PATH=/home/ponyatov/jupy/bin:/home/ponyatov/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin"
+
+# ExecStart=/opt/jupyterhub/bin/jupyterhub -f /opt/jupyterhub/etc/jupyterhub/jupyterhub_config.py
+ExecStart=/home/ponyatov/jupy/bin/jupyterhub -f /home/ponyatov/jupy/jupyterhub_config.py
+
+[Install]
+
+WantedBy=default.target
+# multi-user.target
+
