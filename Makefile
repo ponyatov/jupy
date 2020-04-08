@@ -16,7 +16,7 @@ systemd: bin/jupyterhub jupyterhub_config.py
 	sudo systemctl enable jupyterhub.service
 	sudo systemctl stop  jupyterhub.service
 	sudo systemctl start jupyterhub.service
-
+	echo http://127.0.0.1:8000/user/$(USER)/tree
 
 
 .PHONY: install
@@ -66,14 +66,14 @@ debian:
 
 MERGE  = Makefile README.md .gitignore .vscode
 MERGE += requirements.txt jupyterhub_config.py
-MERGE += etc nb
+MERGE += etc nb/EDS.ipynb
 
-master:
-	git checkout master
+public:
+	git checkout $@
 	git checkout shadow -- $(MERGE)
 
 shadow:
-	git checkout shadow
+	git checkout $@
 
 release:
 	git tag $(NOW)-$(REL)
