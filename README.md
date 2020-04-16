@@ -3,15 +3,21 @@
 
 (by) Dmitry Ponyatov <<dponyatov@gmail.com>> 2020
 
-github: http://192.168.12.34/ponyatov/jupy
+git server: http://192.168.12.34/ponyatov/jupy
 
 - система коллективного сетевого доступа (веб-клиент, без установки ПО на рабочих станциях)
 - сервер БД Postgres/PostGis
 - интеграция с интранет-сервисами УГМС
 
-
 service: http://127.0.0.1:8000/
 
+## meteo.kit
+
+github (public EDS only): https://github.com/ponyatov/jupy/tree/public/nb
+
+* @ref frame
+* @ref eds
+* @ref core
 
 ## Install
 

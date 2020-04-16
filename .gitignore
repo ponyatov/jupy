@@ -11,3 +11,4 @@ lib64
 share/
 jupyterhub.sqlite
 jupyterhub_cookie_secret
+docs/

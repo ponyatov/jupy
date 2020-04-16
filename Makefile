@@ -19,6 +19,16 @@ systemd: bin/jupyterhub jupyterhub_config.py
 	echo http://127.0.0.1:8000/user/$(USER)/tree
 
 
+.PHONY: test
+test:
+	$(MAKE) -C $(CWD)/nb/meteo PY=$(PY) $@
+
+
+.PHONY: doxy
+doxy: doxy.gen
+	rm -rf $(CWD)/docs ; doxygen $< 1>/dev/null
+
+
 .PHONY: install
 install: os $(PIP)
 	$(PIP) install       wheel
