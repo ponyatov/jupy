@@ -50,7 +50,7 @@ jupyter-contrib-core==0.3.3
 jupyter-core==4.6.3
 jupyter-nbextensions-configurator==0.4.1
 jupyter-telemetry==0.0.5
-jupyterhub==1.1.0
+jupyterhub==1.5.0
 jupyterlab==2.0.1
 jupyterlab-server==1.0.7
 keyring==17.1.1
