@@ -57,7 +57,7 @@ keyring==17.1.1
 keyrings.alt==3.1.1
 lazy-object-proxy==1.4.3
 libvirt-python==5.0.0
-Mako==1.0.7
+Mako==1.2.2
 MarkupSafe==1.1.0
 mccabe==0.6.1
 meld==3.20.0
